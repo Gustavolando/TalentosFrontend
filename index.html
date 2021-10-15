@@ -1,0 +1,80 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>World Talent</title>
+    <meta name="description" content="Figma htmlGenerator" />
+    <meta name="author" content="htmlGenerator" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Mulish&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="register__container">
+      <h2 class="title"><span class="big_title">WORLD TALENT</span></h2>
+      <form class="form" action="">
+        <div class="form__container">
+          <div class="left">
+            <div class="inputbox">
+              <input type="text" placeholder="Nombre"/>
+            </div>
+            <div class="inputbox">
+              <input type="text" placeholder="Apellido 1"/>
+            </div>
+            <div class="inputbox">
+              <input type="text" placeholder="Apellido 2"/>
+            </div>
+            <div class="inputbox">
+              <input 
+                placeholder="Fecha de nacimiento" 
+                class="form-control" 
+                type="text" 
+                onfocus="(this.type='date')" 
+                onblur="(this.type='text')" 
+                id="date"
+              />
+            </div>
+            <div class="inputbox">
+              <input type="text" placeholder="Nacionalidad"/>
+            </div>
+            <div class="inputbox">
+              <input type="text" placeholder="País de residencia"/>
+            </div>
+          </div>
+          <div class="right">
+            <div class="inputbox">
+              <input type="text" placeholder="Usuario"/>
+            </div>
+            <div class="inputbox">
+              <input type="password" placeholder="Contraseña"/>
+            </div>
+            <div class="inputbox">
+              <input type="password" placeholder="Confirmar contraseña"/>
+            </div>
+            <div class="inputbox">
+              <input type="text" placeholder="DNI"/>
+            </div>
+            <div class="inputbox">
+              <input type="text" placeholder="Email"/>
+            </div>
+          </div>
+        </div>
+        <div class="inputbox checkBox">
+          <input type="checkbox"/>
+          <label for="">Acepto los términos y condiciones de WorldTalent</label>
+        </div>
+        <div class="inputbox button">
+          <input type="submit" value="Registrarme">
+        </div>
+      </form>
+      <p class="label_have_account">
+        ¿Ya tienes una cuenta? <a href="#"><span>Ingresa aquí</span></a>
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+:root {
+	--primary-color: #112C68;
+	--secundary-color:  #476AC7;
+	--highlight-color: #FCEE21;
+	--light-color: #E6E6E6;
+	--grey-color: #505050;
+	--gradient-102-deg: linear-gradient(102.03deg, #112C68 0%, #112C68 10%, #3E63CC 50%, #476AC7 54%, #5F7BB8 61%, #8798A0 70%, #BEC17F 80%, #FCEE59 90%, #FCEE21 100%);
+	--gradient-180-deg: background: linear-gradient(180deg, #112C68 0%, #3E63CC 50%, #476AC7 54%, #5F7BB8 61%, #8798A0 70%, #BEC17F 80%, #FCEE59 90%, #FCEE21 100%);
+	--gradient-purple: linear-gradient(90deg, #8B4BBC 11644.8%, #112C68 15072.25%);
+	--font-size: 1.8rem;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family:Mulish;
+}
+html {
+	font-size: 67.5%;
+}
+body {
+	font-size: 1.6rem;
+	min-height:100vh;
+	position:relative;
+	background-image:url(images/registro.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.register__container { 
+	background-color: var(--light-color);
+	width:400px;
+	position:relative;
+	border-radius: 25px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
+}
+.title { 
+	position:relative;
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+.big_title { 
+	color:var(--primary-color);
+	width:256px;
+	position:relative;
+	text-align:center;
+	font-size:32px;
+	letter-spacing:1;
+}
+.form { 
+	position:relative;
+	width: 100%;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	flex-direction: column;
+}
+.form__container {
+	width: 100%;
+	display: flex;
+	justify-content:space-evenly;
+	align-items: flex-start;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.right, .left {
+	min-width: 45%;
+}
+.form .inputbox {
+	width: 100%;
+	margin-top: 15px;
+	font-size: 1.4rem;
+}
+.form .inputbox input{ 
+	width:100%;
+	height:30px;
+	position:relative;
+	background-color:rgba(255, 255, 255, 1);
+	border: none;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.checkBox {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.form .button {
+	width: 90%;
+}
+.form .inputbox input[type="submit"] { 
+	background-color: var(--primary-color);
+	color: #fff;
+	height: 30px;
+}
+.form .inputbox input[type="checkbox"]{ 
+	margin-right: 5px;
+	height: 1.2rem;
+	width: 1.2rem;
+}
+.register__container p {
+	margin-top: 20px;
+	margin-bottom: 30px;
+	text-align: center;
+	font-size: 1.4rem;
+}
