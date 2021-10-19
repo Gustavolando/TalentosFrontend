@@ -17,10 +17,12 @@
 }
 html {
 	font-size: 67.5%;
+	scroll-behavior: smooth;
 }
 body {
+}
+main {
 	font-size: 1.6rem;
-	min-height:100vh;
 	position:relative;
 	background-image:url(images/registro.png);
 	background-repeat:no-repeat;
@@ -28,8 +30,135 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
+}
+.card__container {
+	min-height:100vh;
+	position: relative;
+  width: 100%;
+  height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.25);
+  transition: 1s;
+}
+.images__container {
+  position: relative;
+  display: flex;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, transparent, #0004);
+}
+.images__container .box {
+	position: relative;
+  width: 400px;
+  height: 400px;
+  background: #444;
+  margin: 0 20px;
+	border: none;
+  border-radius: 20px;
+  background: linear-gradient(45deg, var(--highlight-color) 25%, var(--grey-color) 25%, var(--grey-color) 50%, var(--highlight-color) 50%, var(--highlight-color) 75%, var(--grey-color) 75%, var(--grey-color) 100%);
+  background-size: 40px 40px;
+  filter: grayscale(1);
+  animation: animate 1s linear infinite;
+  animation-play-state: paused;
+  transition: filter 1s;
+  transition: transform 0.4s;
+  display: flex;
+  justify-content: center;
+}
+.images__container .box h2 {
+	position: absolute;
+	left: 10px;
+	top: -25px;
+	color: #fff;
+	opacity: 0.8;
+}
+.images__container .box:hover h2 {
+	opacity: 1;
+}
+.images__container .box:nth-child(2) {
+  background: linear-gradient(135deg, var(--secundary-color) 25%, var(--grey-color) 25%, var(--grey-color) 50%, var(--secundary-color) 50%, var(--secundary-color) 75%, var(--grey-color) 75%, var(--grey-color) 100%);
+  background-size: 40px 40px;
+}
+.images__container .box:hover {
+  animation-play-state: running;
+  filter: grayscale(0);
+}
+.images__container .box img {
+	position: relative;
+  height: 90%;
+  position: absolute;
+  bottom: 0;
+  transition: height 0.5s;
+	cursor: pointer;
+}
+.images__container .box img:hover {
+  height: 480px;
+}
+@keyframes animate {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 40px;
+  }
+}
+.images__container .active {
+  transform: translateX(var(--traslate));
+	filter: grayscale(0);
+	z-index: 2;
+}
+.images__container .inactive {
+	transform: translateZ(20px) scale(0.5);
+	z-index: 1;
+}
+.images__container .box a {
+  position: absolute;
+  display: inline-block;
+	right: 15px;
+	bottom: 15px;
+	width: 200px;
+	height: 40px;
+	text-transform: uppercase;
+	line-height: 1.8rem;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+	opacity: 0;
+	transition: opacity 0.4s;
+}
+.images__container .active a {
+	opacity: 1;
+}
+.images__container .box a span {
+	position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+	border-radius: 25px;
+  color: var(--highlight-color);
+  background: var(--secundary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 18px;
+}
+.images__container .box a span:nth-child(2) {
+  color: var(--secundary-color);
+  background: var(--highlight-color);
+  overflow: hidden;
+  z-index: 2;
+  transition: 0.5s ease-in-out;
+  clip-path: polygon(0% 0%, 5% 0, 10% 50%, 5% 100%, 0% 100%);
+}
+.images__container .box a:hover span {
+  clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
 }
 .register__container { 
+	min-height: 100vh;
 	background-color: var(--light-color);
 	width:400px;
 	position:relative;
@@ -68,11 +197,9 @@ body {
 	flex-direction: row;
 	flex-wrap: wrap;
 }
-.right, .left {
-	min-width: 45%;
-}
 .form .inputbox {
-	width: 100%;
+	min-width: 45%;
+	/* width: 100%; */
 	margin-top: 15px;
 	font-size: 1.4rem;
 }
