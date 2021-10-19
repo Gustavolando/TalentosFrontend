@@ -32,6 +32,11 @@ main {
 	align-items: center;
 	flex-direction: column;
 }
+
+/* ---------------------------- */
+/* ---- PROFILE SELECTION ----- */
+/* ---------------------------- */
+
 .card__container {
 	min-height:100vh;
 	position: relative;
@@ -158,9 +163,11 @@ main {
 .images__container .box a:hover span {
   clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
 }
+
 /* ------------------------ */
 /* ---- ANIMATED LOGO ----- */
 /* ------------------------ */
+
 #logo {
   position: absolute;
   top: 5px;
@@ -245,6 +252,12 @@ main {
 /* --- REGISTER FORM CONTAINER --- */
 /* ------------------------------- */
 
+.register {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 .register__container { 
 	background-color: var(--light-color);
 	width:400px;
@@ -254,8 +267,6 @@ main {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	margin-top: calc(calc(100vh - 50%) / 2);
-	margin-bottom: calc(calc(100vh - 50%) / 2);
 }
 .title { 
 	position:relative;
