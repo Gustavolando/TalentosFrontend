@@ -14,7 +14,7 @@ section {
   align-items: center;
   min-height: 100vh;
   /* background: linear-gradient(to bottom, #f1f4f9, #dff1ff); */
-  background: url('./../images/registro.png');
+  background: url('https://i.ibb.co/rZG3ZQh/registro.jpg');
   background-size: cover;
 }
 .box {
@@ -45,7 +45,7 @@ section {
   right: -60px;
   width: 100px;
   height: 100px;
-  background: url('./../images/Rectangle-1.jpg');
+  background: url('https://i.ibb.co/sHR2q7c/Rectangle-1.jpg');
   background-size: cover;
   opacity: 0.75;
 }
@@ -55,7 +55,7 @@ section {
   width: 120px;
   height: 120px;
   z-index: 2;
-  background: url('./../images/Rectangle-2.jpg');
+  background: url('https://i.ibb.co/FX7XtcQ/Rectangle-2.jpg');
   background-size: cover;
   opacity: 0.75;
 }
@@ -65,7 +65,7 @@ section {
   width: 80px;
   height: 80px;
   z-index: 2;
-  background: url('./../images/Rectangle-3.jpg');
+  background: url('https://i.ibb.co/DWSFnLt/Rectangle-3.jpg');
   background-size: cover;
   opacity: 0.75;
 }
@@ -74,7 +74,7 @@ section {
   left: 100px;
   width: 50px;
   height: 50px;
-  background: url('./../images/Rectangle-4.jpg');
+  background: url('https://i.ibb.co/kBCbWTd/Rectangle-4.jpg');
   background-size: cover;
   opacity: 0.75;
 }
@@ -83,7 +83,7 @@ section {
   left: 140px;
   width: 60px;
   height: 60px;
-  background: url('./../images/Rectangle-5.jpg');
+  background: url('https://i.ibb.co/Y8CbKD1/Rectangle-5.jpg');
   background-size: cover;
   opacity: 0.75;
 }
