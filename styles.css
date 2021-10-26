@@ -47,19 +47,20 @@ main {
 	align-items: center;
   transform-style: preserve-3d;
   transform: perspective(1000px);
-  /* box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.25); */
   transition: 1s;
 }
 .images__container {
 	position: relative;
   display: flex;
+	flex-wrap: wrap;
+	gap: 25px;
   -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, transparent, #0004);
 	z-index: 5;
 }
 .images__container .box {
 	position: relative;
-  width: 400px;
-  height: 400px;
+  width: 280px;
+  height: 280px;
   background: #444;
   margin: 0 20px;
 	border: none;
@@ -101,7 +102,7 @@ main {
 	cursor: pointer;
 }
 .images__container .box img:hover {
-  height: 480px;
+  height: 330px;
 }
 @keyframes animate {
   0% {
