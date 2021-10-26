@@ -53,7 +53,10 @@ main {
 	position: relative;
   display: flex;
 	flex-wrap: wrap;
-	gap: 25px;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 35px;
+	top: 5vh;
   -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, transparent, #0004);
 	z-index: 5;
 }
@@ -78,7 +81,7 @@ main {
 .images__container .box h2 {
 	position: absolute;
 	left: 10px;
-	top: -25px;
+	top: -35px;
 	color: #fff;
 	opacity: 0.8;
 }
@@ -113,6 +116,7 @@ main {
   }
 }
 .images__container .active {
+  transform: translateX(0);
   transform: translateX(var(--traslate));
 	filter: grayscale(0);
 	z-index: 2;
@@ -171,7 +175,8 @@ main {
 
 #logo {
   position: absolute;
-  top: 5px;
+	width: 90%;
+  top: 0px;
   left: 50%;
   transform: translateX(-50%) scale(0.75);
   /* animation: fill 0.5s ease forwards 5s; */
@@ -340,4 +345,9 @@ main {
 	margin-bottom: 30px;
 	text-align: center;
 	font-size: 1.4rem;
+}
+@media screen and (max-width: 960px)  and (orientation: portrait) {
+	.images__container .active {
+		transform: translateX(0);
+	}
 }

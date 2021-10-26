@@ -4,7 +4,9 @@
     <title>World Talent</title>
     <meta name="description" content="World Talent" />
     <meta name="author" content="htmlGenerator" />
-    <link
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link
       href="https://fonts.googleapis.com/css?family=Mulish&display=swap"
       rel="stylesheet"
     />
@@ -18,22 +20,24 @@
     <main>
       <section class="card__container">
         <div class="images__container">
-          <button class="box" style="--traslate: calc(50% + 20px);" onblur="deactivateSelections()">
+          <div class="box" style="--traslate: calc(50% + 20px);" onblur="deactivateSelections()">
             <h2>Talento</h2>
+            <input id="radioTalent" type="radio"/>
             <img src="https://i.ibb.co/W0c91Sn/sport-soccer-man-tr.png" alt="Talento" border="0">
             <a id="registerTalent" href="#register">
               <span>Registrarme</span>
               <span>Ahora</span>
             </a>
-          </button>
-          <button class="box" style="--traslate: calc(-50% - 20px);" onblur="deactivateSelections()">
+          </div>
+          <div class="box" style="--traslate: calc(-50% - 20px);" onblur="deactivateSelections()">
+            <input id="radioScout" type="radio"/>
             <img src="https://i.ibb.co/0YkYCh9/scout-1-tr.png" alt="reclutador buscatalentos" border="0">
             <h2>Reclutador</h2>
             <a id="registerScout" href="#register">
               <span>Registrarme</span>
               <span>Ahora</span>
             </a>
-          </button>
+          </div>
         </div>
         <svg id="logo" width="1024" height="106" viewBox="0 0 1147 106" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M155.32 1.472L119.032 104H103.912L78.1356 30.272L52.0716 104H36.9516L0.807556 1.472H19.6716L45.3036 77.936L71.9436 1.472H85.1916L111.256 78.512L137.464 1.472H155.32Z" stroke="#FCEE21" stroke-width="5" mask="url(#path-1-inside-1_2:5)"/>
@@ -609,22 +613,7 @@
         // add active class in selected tab
         const list = document.querySelectorAll('.box')
         function activeSelection() {
-          // let imgId, img
           list.forEach(box => {
-            // if (!imgId) {
-            //   img = this.querySelector('img')
-            //   imgId = img.getAttribute('id')
-            //   console.log(imgId)
-            // }
-            // if (imgId == 'buttonScout') {
-            //   item.style = 'transform: translateX(calc(50% + 20px));'
-            //   this.style = 'transform: translateX(calc(-50% - 20px));'
-            // } else {
-            //   item.style = 'transform: translateX(calc(-50% - 20px));'
-            //   this.style = 'transform: translateX(calc(50% + 20px));'
-            // }
-            // if (item.querySelector('.active')) {
-            // }
             box.classList.add('inactive')
             box.classList.remove('active')
 
