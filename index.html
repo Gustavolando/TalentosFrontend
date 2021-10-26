@@ -20,24 +20,26 @@
     <main>
       <section class="card__container">
         <div class="images__container">
-          <div class="box" style="--traslate: calc(50% + 20px);" onblur="deactivateSelections()">
-            <h2>Talento</h2>
-            <input id="radioTalent" type="radio"/>
-            <img src="https://i.ibb.co/W0c91Sn/sport-soccer-man-tr.png" alt="Talento" border="0">
-            <a id="registerTalent" href="#register">
-              <span>Registrarme</span>
-              <span>Ahora</span>
-            </a>
-          </div>
-          <div class="box" style="--traslate: calc(-50% - 20px);" onblur="deactivateSelections()">
-            <input id="radioScout" type="radio"/>
-            <img src="https://i.ibb.co/0YkYCh9/scout-1-tr.png" alt="reclutador buscatalentos" border="0">
-            <h2>Reclutador</h2>
-            <a id="registerScout" href="#register">
-              <span>Registrarme</span>
-              <span>Ahora</span>
-            </a>
-          </div>
+          <form name="profile">
+            <div class="box" style="--traslate: calc(50% + 20px);" onblur="deactivateSelections()">
+              <h2>Talento</h2>
+              <input id="radioTalent" type="radio" name="profile" onclick="changeTalentFields()"/>
+              <img src="https://i.ibb.co/W0c91Sn/sport-soccer-man-tr.png" alt="Talento" border="0">
+              <a id="registerTalent" href="#register">
+                <span>Registrarme</span>
+                <span>Ahora</span>
+              </a>
+            </div>
+            <div class="box" style="--traslate: calc(-50% - 20px);" onblur="deactivateSelections()">
+              <input id="radioScout" type="radio" name="profile" onclick="changeScoutFields()"/>
+              <img src="https://i.ibb.co/0YkYCh9/scout-1-tr.png" alt="reclutador buscatalentos" border="0">
+              <h2>Reclutador</h2>
+              <a id="registerScout" href="#register">
+                <span>Registrarme</span>
+                <span>Ahora</span>
+              </a>
+            </div>
+          </form>
         </div>
         <svg id="logo" width="1024" height="106" viewBox="0 0 1147 106" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M155.32 1.472L119.032 104H103.912L78.1356 30.272L52.0716 104H36.9516L0.807556 1.472H19.6716L45.3036 77.936L71.9436 1.472H85.1916L111.256 78.512L137.464 1.472H155.32Z" stroke="#FCEE21" stroke-width="5" mask="url(#path-1-inside-1_2:5)"/>
@@ -577,7 +579,7 @@
                   </datalist>
                 </div>
               </div>
-              <div class="form_right">
+              <div class="form__right">
                 <div class="inputbox">
                   <input type="text" placeholder="Usuario"/>
                 </div>
@@ -593,7 +595,13 @@
                 <div class="inputbox">
                   <input type="text" placeholder="DNI"/>
                 </div>
+                <div class="inputbox">
+                  <input id="formCompany" type="text" placeholder="Empresa"/>
+                </div>
               </div>
+            </div>
+            <div class="inputbox parrafo">
+              <input id="formCompanyDescription" type="text" placeholder="Descripcion de la empresa"/>
             </div>
             <div class="inputbox checkBox">
               <input type="checkbox"/>
@@ -630,6 +638,19 @@
         list.forEach(item => {
           item.addEventListener('click', activeSelection)
         })
+        const changeTalentFields = () => {
+          let formCompany = document.querySelector('#formCompany')
+          let formCompanyDescription = document.querySelector('#formCompanyDescription')
+          formCompany.style.display = 'none'
+          formCompanyDescription.style.display = 'none'
+        }
+        const changeScoutFields = () => {
+          let formCompany = document.querySelector('#formCompany')
+          let formCompanyDescription = document.querySelector('#formCompanyDescription')
+          formCompany.style.display = 'block'
+          formCompanyDescription.style.display = 'block'
+        }
+          
       </script>
     </main>
   </body>
