@@ -53,7 +53,6 @@ section {
   left: -100px;
   width: 120px;
   height: 120px;
-  z-index: 2;
   background: url('https://i.ibb.co/FX7XtcQ/Rectangle-2.jpg');
   background-size: cover;
   opacity: 0.75;
@@ -63,7 +62,6 @@ section {
   right: -60px;
   width: 80px;
   height: 80px;
-  z-index: 2;
   background: url('https://i.ibb.co/DWSFnLt/Rectangle-3.jpg');
   background-size: cover;
   opacity: 0.75;
